@@ -114,8 +114,9 @@ def show_top_three(data):
 
     for i in range(3):
         best_day_index = best_selling_day(data_copy)
+        print(best_day_index)
         top_days.append(best_day_index)
-        data_copy.pop(best_day_index)
+        data_copy.pop(best_day_index - 1)
 
     return top_days
 
@@ -143,5 +144,3 @@ print("Day with highest total sales:", best_selling_day(sales_data))
 print("Days when product_c exceeded 300 sales:", days_above_threshold(sales_data, "product_c", 300))
 print("Product with highest total sales:", top_product(sales_data))
 print("Top Three Selling Days:", show_top_three(sales_data))
-
-
