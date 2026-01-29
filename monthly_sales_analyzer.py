@@ -57,7 +57,7 @@ def best_selling_day(data):
 
         if total_sales > total_sale_max:
             total_sale_max = total_sales
-            best_day = i
+            best_day = data[i]["day"]
 
     return best_day
 
@@ -136,7 +136,7 @@ def get_range(data, product_key):
     range = max_sales - min_sales
     return range
 
-# Function tests
+# # Function tests
 print("Total sales of product_a:", total_sales_by_product(sales_data, "product_a"))
 print("Average daily sales of product_b:", average_daily_sales(sales_data, "product_b"))
 print("Day with highest total sales:", best_selling_day(sales_data))
